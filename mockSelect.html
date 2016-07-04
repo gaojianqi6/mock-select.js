@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>模拟Select</title>
+	<link rel="stylesheet" type="text/css" href="./mockSelect/styles/default/mockSelect.css">
+</head>
+<body style="padding: 50px 0 0 200px">
+	<div id="mock_select" class="select_mock_wrap">
+        <input type="hidden" name="select_value" class="select_mock_value" value="" />
+        <input type="hidden" name="select_desc" class="select_mock_desc" value="" />
+        <div class="select_cur_area">
+            <div class="select_cur_content">
+                选择开户银行
+            </div>
+            <div class="select_arr">
+            </div>
+        </div>
+
+        <ul class="select_mock_contents">
+            <li value="PBC">中国人民银行</li>
+            <li value="CCB">中国建设银行</li>
+            <li value="ABC">中国农业银行</li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="./lib/jquery/jquery.js"></script>
+	<script type="text/javascript" src="./mockSelect/mockSelect.js"></script>
+	<script type="text/javascript">
+		MockSelect.initSelect("mock_select");
+	</script>
+</body>
+</html>

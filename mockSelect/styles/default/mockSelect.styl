@@ -1,0 +1,77 @@
+@require "../../stylus/merak-stylus/variables"
+
+$select-border-color = #d8e0eb
+$select-back-color = #fff
+$select-hover-back-color = #f3f6fe
+
+.select_mock_wrap
+  display inline-block
+  position relative
+  width 320px
+  .select_cur_area
+    cursor pointer
+  .select_cur_content
+    cursor pointer
+    display inline-block
+    width 320px
+    height: 42px;
+    line-height: 42px
+    padding: 0px 12px;
+    font-size: $font-size-small;
+    color: #C0C7D4;
+    background-color: $select-back-color;
+    background-image: none;
+    border: 1px solid $select-border-color;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-sizing: border-box;
+
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+  .select_cur_content.val
+    color #798698
+    font-size 12px
+
+  .select_arr
+    width 40px
+    height 41px
+    position absolute
+    z-index: 2;
+    top 0
+    right 0
+    border-left 1px solid $select-border-color
+    background unquote('url("./arr_bottom.png") no-repeat center center')
+  .select_arr.open
+    background unquote('url("./arr_top.png") no-repeat center center')
+  .select_mock_contents
+    margin 0
+    display none
+    list-style none
+    width 100%
+    max-height 230px
+    position absolute
+    top 42px
+    padding 0
+    box-sizing border-box
+    left 0
+    z-index: 5
+    background $select-back-color
+    border 1px solid $select-border-color
+    border-top 0
+    overflow-y auto
+    overflow-x hidden
+    li
+      padding 0 12px
+      width 100%
+      line-height 36px
+      font-size $font-size-small
+      cursor pointer
+      color $label-color
+    li[aria-status="active"]
+      color #798698
+      font-size 12px
+    li:hover
+      background-color $select-hover-back-color

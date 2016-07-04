@@ -1,0 +1,83 @@
+.select_mock_wrap {
+  display: inline-block;
+  position: relative;
+  width: 320px;
+}
+.select_mock_wrap .select_cur_area {
+  cursor: pointer;
+}
+.select_mock_wrap .select_cur_content {
+  cursor: pointer;
+  display: inline-block;
+  width: 320px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0px 12px;
+  font-size: 12px;
+  color: #c0c7d4;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d8e0eb;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-sizing: border-box;
+  -moz-user-select: none;
+/*火狐*/
+  -webkit-user-select: none;
+/*webkit浏览器*/
+  -ms-user-select: none;
+/*IE10*/
+  -khtml-user-select: none;
+/*早期浏览器*/
+  user-select: none;
+}
+.select_mock_wrap .select_cur_content.val {
+  color: #798698;
+  font-size: 12px;
+}
+.select_mock_wrap .select_arr {
+  width: 40px;
+  height: 41px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  border-left: 1px solid #d8e0eb;
+  background: url("./arr_bottom.png") no-repeat center center;
+}
+.select_mock_wrap .select_arr.open {
+  background: url("./arr_top.png") no-repeat center center;
+}
+.select_mock_wrap .select_mock_contents {
+  margin: 0;
+  display: none;
+  list-style: none;
+  width: 100%;
+  max-height: 230px;
+  position: absolute;
+  top: 42px;
+  padding: 0;
+  box-sizing: border-box;
+  left: 0;
+  z-index: 5;
+  background: #fff;
+  border: 1px solid #d8e0eb;
+  border-top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.select_mock_wrap .select_mock_contents li {
+  padding: 0 12px;
+  width: 100%;
+  line-height: 36px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #c0c7d4;
+}
+.select_mock_wrap .select_mock_contents li[aria-status="active"] {
+  color: #798698;
+  font-size: 12px;
+}
+.select_mock_wrap .select_mock_contents li:hover {
+  background-color: #f3f6fe;
+}
